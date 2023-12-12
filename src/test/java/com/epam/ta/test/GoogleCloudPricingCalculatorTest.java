@@ -49,7 +49,6 @@ public class GoogleCloudPricingCalculatorTest extends CommonConditions {
         calculatorPage.enterDataCenterLocation(testProduct.getDataCenterLocation());
         calculatorPage.enterCommittedUsage(testProduct.getCommittedUsage());
         calculatorPage.clickAddToEstimateButton();
-        calculatorPage.highlightResultingContent();
 
         Assert.assertEquals(calculatorPage.getEstimationResult(), MANUALLY_GOT_ESTIMATION,
                 "Estimations got manually and automatically are different!");

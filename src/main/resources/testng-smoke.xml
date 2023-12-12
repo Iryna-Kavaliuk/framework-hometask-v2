@@ -2,7 +2,7 @@
     <test name="All tests" >
         <parameter name="browser" value="chrome" />
         <packages>
-            <package name="com.epam.ta.test.SearchCloudPricingCalculatorTest" />
+            <package name="test.java.com.epam.ta.test.SearchCloudPricingCalculatorTest" />
         </packages>
     </test>>
 </suite>

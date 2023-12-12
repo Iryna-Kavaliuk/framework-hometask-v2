@@ -2,7 +2,7 @@
     <test name="All tests" >
         <parameter name="browser" value="chrome" />
         <packages>
-            <package name="src.test.java.com.epam.ta.test" />
+            <package name="test.java.com.epam.ta.test" />
         </packages>
     </test>>
 </suite>
