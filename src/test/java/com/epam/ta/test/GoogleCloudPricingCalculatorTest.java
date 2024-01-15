@@ -15,7 +15,7 @@ public class GoogleCloudPricingCalculatorTest extends CommonConditions {
     private GoogleCloudHomePage homePage;
     private GoogleCloudPricingCalculatorPage calculatorPage;
 
-    private static final String MANUALLY_GOT_ESTIMATION = "2,126.74 / mo";
+    private static final String MANUALLY_GOT_ESTIMATION = "1,840.40 / mo";
 
     @BeforeMethod
     public void browserSetup() {
@@ -28,6 +28,7 @@ public class GoogleCloudPricingCalculatorTest extends CommonConditions {
         homePage.enterSearchTerm(SEARCH_TERM);
         String targetLink = homePage.findTargetingLinkInSearchResults(RESULTING_TERM);
         calculatorPage = homePage.navigateWithTargetingLinkFromSearchResults(targetLink);
+        calculatorPage.openPage();
         Assert.assertTrue(calculatorPage.isPageOpened(), "Google Cloud Calculator is failed to open");
     }
 

@@ -11,6 +11,7 @@ import org.openqa.selenium.WebElement;
 import java.util.List;
 
 public class GoogleCloudPricingCalculatorPage extends AbstractPage{
+    private static final String CALCULATOR_PAGE_LEGACY_URL  = "https://cloud.google.com/products/calculator-legacy";
     private final Logger logger = LogManager.getRootLogger();
     private WebElement currentElement;
     public GoogleCloudPricingCalculatorPage(WebDriver driver) {
@@ -48,6 +49,7 @@ public class GoogleCloudPricingCalculatorPage extends AbstractPage{
 
     @Override
     public GoogleCloudPricingCalculatorPage openPage() {
+        driver.get(CALCULATOR_PAGE_LEGACY_URL);
         logger.info("Pricing calculator page opened");
         return this;
     }
