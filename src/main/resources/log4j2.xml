@@ -11,11 +11,21 @@
                 <Pattern>%d %p %c{2} [%t] %m%n</Pattern>
             </PatternLayout>
         </File>
+        <properties>
+            <property name="pattern">[%d{HH:mm:ss}] %-5p (%F:%L) - %m%n</property>
+        </properties>
+        <ReportPortalLog4j2Appender name="ReportPortalAppender">
+            <PatternLayout pattern="${pattern}"/>
+        </ReportPortalLog4j2Appender>
     </Appenders>
     <Loggers>
         <Root level="trace">
             <AppenderRef ref="Console"/>
             <AppenderRef ref="File"/>
+            <appender-ref ref="ReportPortalAppender"/>
         </Root>
+        <root level="all">
+            <appender-ref ref="ReportPortalAppender"/>
+        </root>
     </Loggers>
 </Configuration>

@@ -1,5 +1,6 @@
 package com.epam.ta.test;
 
+import com.epam.reportportal.testng.ReportPortalTestNGListener;
 import com.epam.ta.driver.DriverSingleton;
 import com.epam.ta.utils.TestListener;
 import org.openqa.selenium.WebDriver;
@@ -7,7 +8,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 
-@Listeners({TestListener.class})
+@Listeners({TestListener.class, ReportPortalTestNGListener.class})
 public class CommonConditions {
     protected WebDriver driver;
 
